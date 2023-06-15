@@ -108,9 +108,12 @@ body > h2 {
   }
 }
 
+body > h3 {
+  display: none;
+}
+
 @media (min-width: 1200px) {
   body > h3 {
     display: none;
   }
 }
-/* aici imi spune ca nu am folosit body > h3 si nu inverzeste*/
