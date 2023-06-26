@@ -1,0 +1,42 @@
+@mixin mq-md-down() {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mq-md-up() {
+  @media (min-width: 501px) {
+    @content;
+  }
+}
+
+@include mq-md-down() {
+  .box-2 {
+    display: none;
+  }
+}
+
+// Alexandra
+// @include mq-md-up() {
+//   .box-2 {
+//     background-color: green;
+//   }
+// }
+
+// Dragosh
+// .box-2 {
+//   @include mq-md-up() {
+//     background-color: green;
+//   }
+// }
+
+// varianta preferata
+.box-2 {
+  @include mq-md-down() {
+    display: none;
+  }
+
+  @include mq-md-up() {
+    background: green;
+  }
+}
