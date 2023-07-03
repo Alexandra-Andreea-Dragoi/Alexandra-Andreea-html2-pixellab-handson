@@ -10,7 +10,7 @@ body {
   height: var(--d);
 }
 
-/* .box-1 {
+.box-1 {
   background: darkred;
   animation: box-1 10s ease-out;
 }
@@ -25,7 +25,7 @@ body {
   100% {
     transform: translate(0, 0);
   }
-} */
+}
 
 /* vw - viweport width - doar dimensiunea ferestrei */
 /* vh - viewport height - doar dimensiunea ferestrei */
