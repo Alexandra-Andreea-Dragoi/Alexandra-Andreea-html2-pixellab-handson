@@ -59,7 +59,7 @@
 }
 
 @mixin circleBorder($color: brown) {
-  border: blue;
+  border: $color;
 }
 
 .circle {
