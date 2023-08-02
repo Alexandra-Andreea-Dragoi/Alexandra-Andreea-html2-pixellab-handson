@@ -27,6 +27,7 @@
 
       <div>
         <section class=" container border border-dark mb-4 py-2">
+          <!-- daca nu are padding, nu o sa genereze cutia!!!-->
           <div class="row mb-2 justify-content-between">
             <div class="col-4 bg-info border p-4"></div>
             <div class="col-4 bg-info border p-4"></div>
@@ -60,13 +61,14 @@
     <!-- with flex -->
 
     <section>
-      <header>
+      <header class="mb-2">
         <h1>Aliniate folosind offset</h1>
       </header>
 
       <div>
         <section class="container border border-dark mb-4 py-2 d-flex flex-column gap-2">
           <div class="row">
+            <!-- !!! padding pe coloana sa dispay -->
             <div class="col-4 py-4 bg-success"></div>
 
             <div class="col-4 py-4 bg-success offset-4"></div>

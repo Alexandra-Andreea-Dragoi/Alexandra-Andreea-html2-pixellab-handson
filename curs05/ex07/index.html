@@ -11,6 +11,12 @@
     http-equiv="X-UA-Compatible"
     content="ie=edge"
   >
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  >
+
   <title>Spacing</title>
 
   <link
@@ -20,10 +26,24 @@
 </head>
 
 <body>
-  <div class="box">1</div>
-  <div class="box">2</div>
-  <div class="box">3</div>
-  <div class="box">4</div>
+  <div class="box me-xs-2 mt-xs-4 pe-xs-4">1</div>
+  <div class="box mx-lg-2 mt-lg-4 pe-lg-4">2</div>
+  <div class="box mx-xs-3 mt-xs-4 pe-xs-2">3</div>
+  <div class="box mx-lg-3 mt-lg-2 p-lg-4">4</div>
+
+  <!-- cutiile 1 si 3 nu inverzesc pixeltab-ul -->
+  <!--
+    Pentru rezolutia cea mai mica - am ales xs, dar am incercat si sm si tot nu merge.
+
+    Pentru cutia 1, seteaza:
+Marginea dreapta la 2
+Marginea sus la 4
+Paddingul dreapta la 4
+    Pentru cutia 3, seteaza:
+Marginea dreapta si stanga la 3
+Marginea de sus la 4
+Paddingul dreapta la 2
+ -->
 
   <div
     class="pixeltab-host"

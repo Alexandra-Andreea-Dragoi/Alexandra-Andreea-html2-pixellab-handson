@@ -35,22 +35,24 @@
 
 
   <form class="general">
-    <section class="general container">
+    <section class="general container mb-4">
       <header class="mb-3">
         <h1>Reteta</h1>
       </header>
 
       <div class="row">
-        <div class="row col-lg-6 d-flex flex flex-column gap-3">
-          <div class="input-grup">
+        <div class="col-lg-6 d-flex flex-column gap-3">
+          <div class="input-group">
             <label
               for="recipe-name"
-              class="input-grup-text"
+              calss="input-group-text"
             >Numele Retetei *</label>
+
             <input
               type="text"
-              id="recipe-name"
               name="recipe-name"
+              id="recipe-name"
+              class="form-control"
               placeholder="Numele Retetei"
               required
             >
@@ -59,61 +61,348 @@
           <div class="input-group">
             <label
               for="description-long"
-              class="input-grup-text"
-            >
-              Descrierea Retetei *
-            </label>
+              class="input-group-text align-items-start"
+            >Descrierea retetei *</label>
 
             <textarea
               name="description-long"
               id="description-long"
-              cols="30"
-              rows="10"
-              placeholder="Descrierea Retetei"
+              class="form-control"
+              rows="8"
+              placeholder="Descriere a retetei *"
+              required
+            ></textarea>
+          </div>
+
+          <div class="input-group">
+            <label
+              for="description-short"
+              class="input-group-text align-items-start"
+            >Descrierea scurta *</label>
+
+            <textarea
+              name="description-short"
+              id="description-short"
+              class="form-control"
+              rows="4"
+              placeholder="Descrierea scurta *"
+              required
             ></textarea>
           </div>
         </div>
 
-        <div class="row col-6">
-          <div class="col-lg-6 mt-3 mt-lg-0 d-flex flex flex-column gap-4">
-            <div>
-              <label
-                for="recipe-image"
-                class="form-label"
-              >Imagine Principala *</label>
+        <div class="col-lg-6 mt-3 mt-lg-0 d-flex flex-column gap-3">
+          <div>
+            <label
+              for="recipe-image"
+              class="form-label"
+            >Imaginea principala *</label>
 
-              <input
-                type="file"
-                name="recipe-image"
-                id="recipe-image"
-                class="form-control"
-                required
-              >
-            </div>
+            <input
+              type="file"
+              name="recipe-image"
+              id="recipe-image"
+              class="form-control"
+              required
+            >
           </div>
 
           <div class="input-group">
             <label
               for="author"
-              class="input-grup-text"
-            ></label>
+              class="input-group-text"
+            >Autor *</label>
+
+            <select
+              name="author"
+              id="author"
+              class="form-select"
+              required
+            >
+              <option value="">-- selecteaza --</option>
+            </select>
           </div>
         </div>
-
       </div>
     </section>
     <!-- ./general -->
 
-    <section class="author"></section>
+    <section class="author container mb-4">
+      <header class="mb-3">
+        <h1>Autor (optional)</h1>
+      </header>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-check form-switch mb-3">
+            <input
+              type="checkbox"
+              name="add-author"
+              id="add-author"
+              class="form-check-input"
+            >
+
+            <label
+              for="add-author"
+              class="form-check-label"
+            >Adauga autor</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column gap-3">
+            <div class="input-group">
+              <label
+                for="author-name"
+                class="input-group-text"
+              >Nume *</label>
+
+              <input
+                type="text"
+                anme="author-name"
+                id="author-name"
+                class="form-control"
+                placeholder="Nume *"
+                required
+              >
+            </div>
+
+            <div class="input-group">
+              <label
+                for="author-surname"
+                class="input-group-text"
+              >Prenume *</label>
+
+              <input
+                type="text"
+                anme="author-surname"
+                id="author-surname"
+                class="form-control"
+                placeholder="Prenume *"
+                required
+              >
+            </div>
+
+            <div class="input-group">
+              <label
+                for="author-email"
+                class="input-group-text"
+              >Email *</label>
+
+              <input
+                type="email"
+                anme="author-email"
+                id="author-email"
+                class="form-control"
+                placeholder="Email *"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column gap-3">
+            <div class="input-group">
+              <label
+                for="author-website"
+                class="input-group-text"
+              >Website</label>
+
+              <input
+                type="text"
+                anme="author-website"
+                id="author-website"
+                class="form-control"
+                placeholder="Website"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
     <!-- ./author -->
 
-    <section class="ingredients"></section>
+    <section class="ingredients container mb-4">
+      <header class="mb-3">
+        <h1>Ingrediente</h1>
+      </header>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <label
+              for="ingredient-name"
+              class="input-group-text align-items-start"
+            >Nume Ingredient *</label>
+
+            <input
+              type="text"
+              name="ingredient-name"
+              id="ingredient-name"
+              placeholder="Nume Ingredient *"
+              class="form-control"
+              required
+            >
+
+            <button
+              type="button"
+              title="Adauga"
+              class="btn btn-primary text-white"
+            >
+              Adauga
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-3 mt-lg-0">
+          <header class="mb-3">
+            <h3>Lista de ingrediente</h3>
+          </header>
+
+          <ul class="d-flex flex-column align-items-start gap-2">
+            <li class="mb-1">
+              10g ulei
+
+              <button
+                type="button"
+                class="btn btn-primary text-white"
+                title="Editeaza"
+              >Editeaza</button>
+
+              <button
+                type="button"
+                class="btn btn-danger text-white"
+                title="Sterge"
+              >Sterge</button>
+            </li>
+
+            <li class="mb-1">
+              200gr ceapa
+
+              <button
+                type="button"
+                title="Editeaza"
+                class="btn btn-primary text-white"
+              >Editeaza</button>
+
+              <button
+                type="button"
+                title="Sterge"
+                class="btn btn-danger text-white"
+              >Sterge</button>
+            </li>
+
+            <li class="mb-1">
+              200gr ardei gras
+
+              <button
+                type="button"
+                title="Editeaza"
+                class="btn btn-primary text-white"
+              >Editeaza</button>
+
+              <button
+                type="button"
+                title="Sterge"
+                class="btn btn-danger text-white"
+              >Sterge</button>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
     <!-- ./ ingredients -->
 
-    <sectiomn class="steps"></sectiomn>
+    <section class="steps container mb-4">
+      <header class="mb-3">
+        <h1>Pasi</h1>
+      </header>
+
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column gap-3">
+          <div class="input-group">
+            <label
+              for="step-title"
+              class="input-group-text"
+            >Titlul pasului *</label>
+
+            <input
+              type="text"
+              class="form-control"
+              name="step-title"
+              id="step-title"
+              placeholder="Titlul pasului *"
+              required
+            >
+          </div>
+
+          <div class="input-group">
+            <label
+              for="step-subtitle"
+              class="input-group-text"
+            >Subtitlul pasului *</label>
+
+            <input
+              type="text"
+              name="step-subtitle"
+              id="step-subtitle"
+              class="form-control"
+              placeholder="Subtitlul pasului *"
+              required
+            >
+          </div>
+
+          <div class="input-group">
+            <label
+              for="step-description"
+              class="input-group-text align-items-start"
+            >Descriere pas *</label>
+
+            <textarea
+              name="step-description"
+              id="step-description"
+              cols="30"
+              rows="8"
+              class="form-control"
+              placeholder="Descriere pas *"
+            ></textarea>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button
+              class="btn btn-outline-danger me-2"
+              type="button"
+              title="Reseteaza"
+            >Reseteaza</button>
+
+            <button
+              type="button"
+              title="Adauga pas"
+              class="btn btn-primary text-white"
+            >Adauga pas</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ./steps -->
 
-    <section class="controls"></section>
+    <section class="controls container pt-4 mb-4">
+      <div class="d-flex justify-content-center gap-2">
+        <button
+          type="reset"
+          class="btn btn-outline-danger btn-lg"
+          title="Reseteaza tot"
+        >Reseteaza tot"</button>
+
+        <button
+          type="button"
+          class="btn btn-primary btn-lg"
+          title="Trimite reteta"
+        >Trimite reteta</button>
+      </div>
+    </section>
     <!-- ./controls -->
   </form>
 
